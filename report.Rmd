@@ -1,0 +1,33 @@
+---
+title: "서울의 음식점 현황 분석"
+author: "jeongin"
+date: '2022-03-14'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 4. 데이터 전처리
+### 1) 분석 파일을 R로 불러오기
+
+먼저 dplyr과 ggplot2 패키지를 설치한다
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+getwd()
+```
+
+- 메뉴얼 : https://bookdown.org/yihui/rmarkdown/
+
+
+### 2) 시각화 코드
+- 데이터를 불러옵니다 Sepal.Length, Sepal.Width 두 변수에 관한 산점도를 시각화 작성한다
+```{r}
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point()
+```
+
